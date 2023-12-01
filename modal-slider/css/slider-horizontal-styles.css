@@ -1,0 +1,144 @@
+:root {
+  --DEFgap-1: 110%;
+  --DEFgap-2: 180%;
+  --DEFrotateX-1: 0deg;
+  --DEFrotateX-2: 0deg;
+  --DEFrotateY-1: 30deg;
+  --DEFrotateY-2: 75deg;
+  --DEFperspective: 1000px;
+  --DEFscale-1: 90%;
+  --DEFscale-2: 75%;
+  --DEFfont: 'poppins';
+}
+
+[data-slider='slider-horizontal'] {
+  margin: auto;
+}
+
+[data-slider='slider'] {
+  position: relative;
+}
+
+[data-slider='item'] {
+  background: #333;
+  border-radius: 0.25rem;
+  transition: transform 1s ease 0s, opacity 0.4s ease 0s, filter 0.4s ease 0s;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+[data-slider='item'] h1 {
+  font: 600 2rem var(--DEFfont);
+  color: #fff;
+  position: absolute;
+  bottom: 80px;
+  left: -25px;
+  opacity: 0;
+  transition: opacity 0.8s ease 0s, translate 1s ease 0s;
+  translate: 0px -50px 0px;
+}
+
+[data-slider='item'] p {
+  font: 400 0.875rem var(--DEFfont);
+  color: #fff;
+  position: absolute;
+  bottom: 20px;
+  left: -25px;
+  opacity: 0;
+  transition: opacity 0.8s ease 0s, translate 1s ease 0.1s;
+  translate: 0px -50px 0px;
+}
+
+[data-position='2'] h1,
+[data-position='2'] p {
+  opacity: 1;
+  translate: 0px 0px 0px;
+}
+
+[data-slider='item']:not(:nth-child(2)) {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+[data-slider='control'] {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+[data-control] {
+  padding: 0.75rem;
+  background: #222;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+[data-control]:hover {
+  opacity: 0.75;
+}
+
+[data-control]:active {
+  opacity: 0.25;
+}
+
+[data-position='0'] {
+  transform: translate3d(calc(-1 * var(--DEFgap-2)), 0px, 0px) perspective(var(--DEFperspective)) rotateX(var(--DEFrotateX-2))
+    rotateY(calc(-1 * var(--DEFrotateY-2))) scale(var(--DEFscale-2));
+
+  filter: opacity(0) saturate(0%);
+  z-index: 0;
+  animation: ELEMENT-INTRO 1s ease 0.5s 1 both;
+}
+
+[data-position='1'] {
+  transform: translate3d(calc(-1 * var(--DEFgap-1)), 0px, 0px) perspective(var(--DEFperspective)) rotateX(var(--DEFrotateX-1))
+    rotateY(calc(-1 * var(--DEFrotateY-1))) scale(var(--DEFscale-1));
+
+  filter: opacity(0.5) saturate(25%);
+  z-index: 1;
+  animation: ELEMENT-INTRO 1s ease 0.25s 1 both;
+}
+
+[data-position='2'] {
+  transform: translate3d(0px, 0px, 0px);
+  z-index: 2;
+  animation: ELEMENT-INTRO 1s ease 0s 1 both;
+}
+
+[data-position='3'] {
+  transform: translate3d(var(--DEFgap-1), 0px, 0px) perspective(var(--DEFperspective)) rotateX(var(--DEFrotateX-1)) rotateY(var(--DEFrotateY-1))
+    scale(var(--DEFscale-1));
+
+  filter: opacity(0.5) saturate(25%);
+  z-index: 1;
+  animation: ELEMENT-INTRO 1s ease 0.25s 1 both;
+}
+
+[data-position='4'] {
+  transform: translate3d(var(--DEFgap-2), 0px, 0px) perspective(var(--DEFperspective)) rotateX(var(--DEFrotateX-2)) rotateY(var(--DEFrotateY-2))
+    scale(var(--DEFscale-2));
+
+  filter: opacity(0) saturate(50%);
+  z-index: 0;
+  animation: ELEMENT-INTRO 1s ease 0.5s 1 both;
+}
+
+[disabled] {
+  pointer-events: none;
+}
+
+@keyframes ELEMENT-INTRO {
+  0% {
+    translate: 0px 50% 0px;
+    opacity: 0;
+  }
+  100% {
+    translate: 0px 0px 0px;
+    opacity: 1;
+  }
+}

@@ -1,0 +1,45 @@
+[data-block="grass"] {
+  transform-style: preserve-3d;
+  transform-origin: center center;
+  display: flex;
+  position: relative;
+}
+
+/* Position Properties */
+
+[data-grass] {
+  width: 128px;
+  height: 128px;
+  pointer-events: none;
+  box-shadow: 0px 0px 16px -10px #bd6823;
+}
+
+[data-grass]:not(:first-child) {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+[data-grass="front"] {
+  transform: translate3d(0, 0, 64px);
+}
+
+[data-grass="back"] {
+  transform: translate3d(0, 0, -64px);
+}
+
+[data-grass="left"] {
+  transform: translate3d(-50%, 0, 0) rotateY(-90deg);
+}
+
+[data-grass="right"] {
+  transform: translate3d(50%, 0, 0) rotateY(90deg);
+}
+
+[data-grass="top"] {
+  transform: translate3d(0, -50%, 0) rotateX(90deg);
+}
+
+[data-grass="bottom"] {
+  transform: translate3d(0, 50%, 0) rotateX(-90deg);
+}

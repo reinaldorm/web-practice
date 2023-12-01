@@ -1,0 +1,56 @@
+[data-body="chest"] {
+  transform-style: preserve-3d;
+}
+
+/* Position Properties */
+
+[data-chest] {
+}
+
+[data-chest]:not(:first-child) {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+[data-chest="front"],
+[data-chest="back"] {
+  width: 64px;
+  height: 96px;
+}
+
+[data-chest="left"],
+[data-chest="right"] {
+  width: 32px;
+  height: 96px;
+}
+
+[data-chest="top"],
+[data-chest="bottom"] {
+  width: 64px;
+  height: 32px;
+}
+
+[data-chest="front"] {
+  transform: translate3d(0, 0, 16px);
+}
+
+[data-chest="back"] {
+  transform: translate3d(0, 0, -16px);
+}
+
+[data-chest="left"] {
+  transform: translate3d(-50%, 0, 0) rotateY(-90deg);
+}
+
+[data-chest="right"] {
+  transform: translate3d(150%, 0, 0) rotateY(90deg);
+}
+
+[data-chest="top"] {
+  transform: translate3d(0, -16px, 0) rotateX(90deg);
+}
+
+[data-chest="bottom"] {
+  transform: translate3d(0, 80px, 0) rotateX(90deg);
+}

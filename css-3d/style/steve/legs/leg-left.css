@@ -1,0 +1,63 @@
+[data-body="left-leg"] {
+  transform-style: preserve-3d;
+  transform-origin: top center;
+  height: 96px;
+}
+
+/* Animation Properties */
+
+[data-steve="steve"].walking [data-body="left-leg"] {
+  transform: rotateX(-15deg);
+  animation: left-leg-walking linear 1.6s infinite both;
+}
+
+/* Position Properties */
+
+[data-left-leg] {
+}
+
+[data-left-leg]:not(:first-child) {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+[data-left-leg="front"],
+[data-left-leg="back"],
+[data-left-leg="left"],
+[data-left-leg="right"] {
+  width: 32px;
+  height: 96px;
+}
+
+[data-left-leg="front"] {
+  transform: translate3d(0, 0, 16px);
+}
+
+[data-left-leg="back"] {
+  transform: translate3d(0, 0, -16px);
+}
+
+[data-left-leg="left"] {
+  transform: translate3d(-50%, 0, 0) rotateY(-90deg);
+}
+
+[data-left-leg="right"] {
+  transform: translate3d(50%, 0, 0) rotateY(-90deg);
+}
+
+[data-left-leg="top"] {
+  transform: translate3d(0, -50%, 0) rotateX(90deg);
+}
+
+[data-left-leg="bottom"] {
+  transform: translate3d(0, 250%, 0) rotateX(90deg);
+}
+
+/* Left Leg Animations */
+
+@keyframes left-leg-walking {
+  50% {
+    transform: rotateX(15deg);
+  }
+}

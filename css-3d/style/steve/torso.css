@@ -1,0 +1,8 @@
+@import url(./torso/chest.css);
+@import url(./torso/arm-left.css);
+@import url(./torso/arm-right.css);
+
+[data-body="torso"] {
+  transform-style: preserve-3d;
+  display: flex;
+}

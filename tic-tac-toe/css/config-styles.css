@@ -1,0 +1,31 @@
+:root {
+  --defColor: #4164ff;
+  --defFont: "Poppins";
+  --defGlow: 0px 0px 12px -6px var(--defColor);
+}
+
+/* CONFIG PROPERTIES */
+
+.game-config {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+[data-config="gameRestart"] {
+  padding: 0.5rem 0.75rem;
+  background: var(--defColor);
+  color: #111;
+  border-radius: 0.375rem;
+  font: 500 1rem var(--defFont);
+  box-shadow: var(--defGlow);
+  flex: 1;
+  width: 100%;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+[data-config="gameRestart"]:is(:hover) {
+  opacity: 0.75;
+}

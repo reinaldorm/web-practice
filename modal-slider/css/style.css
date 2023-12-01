@@ -1,0 +1,52 @@
+@import url(../css/reset-styles.css);
+@import url(../css/slider-horizontal-styles.css);
+@import url(../css/slider-vertical-styles.css);
+
+::selection {
+  background: 0px;
+  color: 0px;
+}
+
+body {
+  background: #111;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+[data-slider='slider-horizontal'] {
+  display: none;
+}
+
+[data-slider='slider-vertical'] {
+  display: none;
+}
+
+[data-slider='slider-horizontal'].on {
+  display: initial;
+}
+
+[data-slider='slider-vertical'].on {
+  display: flex;
+}
+
+[data-slider='select'] {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+}
+
+[data-select] {
+  margin-bottom: 1rem;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: opacity 0.4s ease 0s;
+}
+
+[data-select]:hover {
+  opacity: 0.75;
+}
+
+[data-select].on {
+  opacity: 1;
+}

@@ -1,0 +1,14 @@
+@import url(./reset-styles.css);
+@import url(./game-styles.css);
+@import url(./config-styles.css);
+
+:root {
+  --defVar: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  gap: 1rem;
+  background: #111;
+}

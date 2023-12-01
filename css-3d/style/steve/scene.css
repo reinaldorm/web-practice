@@ -1,0 +1,6 @@
+@import url(./scene/grass.css);
+
+[data-scene="scene"] {
+  transform-style: preserve-3d;
+  display: flex;
+}

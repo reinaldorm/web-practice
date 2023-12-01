@@ -1,0 +1,58 @@
+@import url(./CSSreset.css);
+
+body {
+  background: #111;
+  height: 100vh;
+  display: flex;
+}
+
+#main-slider {
+  margin: auto auto;
+  position: relative;
+}
+
+#progress-wrapper {
+  display: flex;
+  height: 1.5rem;
+  gap: 0.25rem;
+  padding: 0.5rem 0;
+  justify-content: space-between;
+  position: absolute;
+  z-index: 99;
+  width: 100%;
+  top: -20px;
+}
+
+.progressCont {
+  flex: 1;
+  height: 50%;
+  background: #ffffff80;
+  border-radius: 100vmax;
+}
+
+.progress {
+  background: white;
+  height: 100%;
+  border-radius: 100vmax;
+  width: 0%;
+}
+
+[data-slider] {
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+  display: none;
+  transition: 0.3s;
+}
+
+.control {
+  position: absolute;
+  right: 1.5rem;
+  top: 1.5rem;
+  cursor: pointer;
+  z-index: 1;
+}
+
+[data-slider].on {
+  display: block;
+}

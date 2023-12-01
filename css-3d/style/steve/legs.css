@@ -1,0 +1,7 @@
+@import url(./legs/leg-left.css);
+@import url(./legs/leg-right.css);
+
+[data-body="legs"] {
+  transform-style: preserve-3d;
+  display: flex;
+}
