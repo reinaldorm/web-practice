@@ -1,10 +1,10 @@
 # Web Practicing Projects
 
-Not so long list of projects I've made when I was learning web development and having fun with JavaScript.
+A not so long list with some projects I've made when I was learning web development and having fun writing JavaScript.
 
-Proceed with **caution**, you may see hostile things like `float: left;` (it scares you just to read about it I know) or the use of `px` in `font-size` so, be **aware**.
+Proceed with **caution**, you may see hostile things like `float: left;` (it scares you just to think of I know) and the use of `px` for `font-size` so, be **aware**.
 
-### Full (maybe) Website Projects
+### Full Website Projects
 
 | Name              | Responsive | Description                                                                     | Link                                                                     |
 | ----------------- | ---------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
@@ -18,7 +18,7 @@ Proceed with **caution**, you may see hostile things like `float: left;` (it sca
 | Use Rede          | No         | Remake of a random company's website I happened to stumble on.                  | [Live Preview](https://reinaldorm.github.io/web-practice/use-rede)       |
 | Superget          | No         | Same as the above, found it, remade it and that's it.                           | [Live Preview](https://reinaldorm.github.io/web-practice/superget)       |
 
-### JavaScript Projects
+### JavaScript Driven Projects
 
 | Name          | Responsive | Description                                | Link                                                                    |
 | ------------- | ---------- | ------------------------------------------ | ----------------------------------------------------------------------- |
