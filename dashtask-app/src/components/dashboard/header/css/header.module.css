@@ -1,0 +1,144 @@
+.header {
+  padding: 3rem;
+
+  display: flex;
+  justify-content: space-between;
+
+  grid-column: 2 / -1;
+  grid-row: 1 / 2;
+  position: relative;
+}
+
+.transition {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  position: absolute;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.transitionCover {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  left: calc(50% - 12.5px);
+  border-radius: 50%;
+  top: calc(50% - 12.5px);
+  background-color: #0075ff;
+  z-index: 1;
+}
+
+.legend {
+  font: 700 2rem 'Poppins';
+  color: #fff;
+  text-transform: capitalize;
+  z-index: 2;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.addTask {
+  padding: 0.75rem;
+
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  background: var(--brandBlue);
+  border-radius: 1rem;
+  font: 600 1rem 'Poppins';
+  color: #fff;
+  cursor: pointer;
+  z-index: 2;
+  transition: all 0.6s ease 0s;
+  width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.addTask img {
+  transition: all 0.6s ease 0s;
+  rotate: z 0deg;
+}
+
+.addTaskDark {
+  background: #131313;
+  width: 50px;
+}
+
+.addTaskDark img {
+  rotate: z 135deg;
+}
+
+.userMenu {
+  position: relative;
+}
+
+.userTrigger {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+
+  position: relative;
+
+  font: 600 1rem 'Poppins';
+  color: #fff;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.userTrigger img {
+  transition: rotate 0.4s ease 0s;
+}
+
+.userMenu:global(.active) .userTrigger img {
+  rotate: z -90deg;
+}
+
+.userNav {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  position: absolute;
+  top: 100%;
+  width: 250px;
+  left: -100%;
+  padding: 2rem 0rem;
+  z-index: 2;
+}
+
+.userNavLink {
+  gap: 1.5rem;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  font: 600 1rem 'Poppins';
+  color: #fff;
+  width: 100%;
+  background: #1e1e1e;
+  transition: background 0.2s ease 0s, opacity 0.2s ease 0s;
+  cursor: pointer;
+}
+
+.userNavLink:nth-child(1) {
+  border-radius: 0.5rem 0.5rem 0rem 0rem;
+}
+
+.userNavLink:nth-child(2) {
+  border-radius: 0rem 0rem 0.5rem 0.5rem;
+}
+
+.userNavLink:hover,
+.userNavLink:focus {
+  background: #343434;
+}
+
+.userNavLink:active {
+  opacity: 0.5;
+}

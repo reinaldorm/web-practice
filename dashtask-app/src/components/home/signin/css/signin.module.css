@@ -1,0 +1,126 @@
+.signin {
+  width: 100%;
+  flex: 1;
+  padding: 4rem 16rem;
+  display: grid;
+
+  background: var(--brandBlue) url('../../../../assets/sources/svg/bg-auth.svg') repeat-x center / cover;
+}
+
+.form {
+  background: rgba(26, 26, 26, 0.85);
+  backdrop-filter: blur(0.25rem);
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.formInputs {
+  padding: 2rem 4rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.formHeading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.formHeadingH1 {
+  font: 600 2rem 'Poppins';
+  color: #ffffff;
+  transition: opacity 0.2s ease-in-out 0s;
+}
+
+.formHeadingNavLink {
+  font: 600 1rem 'Poppins';
+  color: #ffffff;
+  transition: opacity 0.4s ease 0s;
+}
+
+.formHeadingNavLink:hover {
+  opacity: 0.5;
+}
+
+.formInput {
+  padding: 1rem 0rem;
+  font: 500 1rem 'Poppins';
+  color: #fff;
+  border-bottom: 0.125rem solid #353535;
+  width: 100%;
+}
+
+.formInput::placeholder {
+  color: #717171;
+}
+
+.formInputLabel {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  font: 600 1.5rem 'Poppins';
+}
+
+.formInputLabel::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #353535;
+}
+
+.formLogin {
+  width: 100%;
+}
+
+.formLoginLinks {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.formLoginLinks button {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  background: #333333;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  gap: 1rem;
+  justify-content: center;
+  font: 600 1rem 'Poppins';
+  color: #fff;
+  cursor: pointer;
+}
+
+.formLoginSubmit {
+  width: 100%;
+  align-items: center;
+  flex: 1;
+  background: var(--brandBlue);
+  font: 600 1.25rem 'Poppins';
+  color: #fff;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.formArt {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(-145deg, #0f0f0f 0.02%, rgba(15, 15, 15, 0.43) 99.98%);
+  backdrop-filter: blur(0.25rem);
+}
+
+.formArt img {
+  max-width: 60%;
+}
